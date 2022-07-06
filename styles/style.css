@@ -1,4 +1,5 @@
 @import url(/styles/normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
 
 *,
 *::after,
@@ -9,4 +10,70 @@
 html {
   font-size: 62.5%;
   min-width: 375px;
+}
+
+:root {
+  /* >Colors */
+  --color-primary: hsl(192, 100%, 9%);
+  --color-secondary: hsl(208, 11%, 55%);
+  --color-button: hsl(322, 100%, 66%);
+  --bg: hsl(193, 100%, 96%);
+
+  /* >Typography */
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "Poppins", sans-serif;
+
+  --fs-large: 2.8rem;
+  --fs-medium: 2.6rem;
+  --fs-small: 1.8rem;
+}
+
+/* >Typography */
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-small);
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: var(--ff-secondary);
+  color: var(--color-primary);
+  line-height: 2.4ch;
+}
+
+h1 {
+  font-size: var(--fs-large);
+}
+
+h2 {
+  font-size: var(--fs-medium);
+}
+
+p {
+  line-height: 2.6ch;
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
+.accent {
+  color: var(--bg);
+}
+
+@media (min-width: 500px) {
+  :root {
+    --fs-large: 3.2rem;
+    --fs-medium: 2.5rem;
+    --fs-small: 1.6rem;
+  }
+
+  body {
+    text-align: left;
+  }
 }
